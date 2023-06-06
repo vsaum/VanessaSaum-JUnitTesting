@@ -135,7 +135,7 @@ public abstract class Employee implements Printable {
                 "\nType: " + employeeType.toString();
     }
 
-    @Override
+
     public void print()
     {
         System.out.println(toString());
@@ -193,8 +193,9 @@ public abstract class Employee implements Printable {
 
     public boolean equals(Object obj2)
     {
-        if (obj2 instanceof Employee e2)
+        if (obj2 instanceof Employee)
         {
+            Employee e2 = (Employee)obj2;
             if (employeeNum == e2.getEmployeeNumber())
             {
                 return true;
