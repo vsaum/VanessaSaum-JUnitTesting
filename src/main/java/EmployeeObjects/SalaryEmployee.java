@@ -21,13 +21,18 @@ public final class SalaryEmployee extends Employee {
     @Override
     public double calculateWeeklyPay()
     {
-        return salary/52;
+        double pay = (double)Math.round(salary/52*100)/100;
+        return pay;
     }
     
     @Override
     public void annualRaise()
     {
        salary += salary * .0625;
+    }
+
+    public double getSalary() {
+        return salary;
     }
     
     @Override

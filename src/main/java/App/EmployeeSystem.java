@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * @author Lucas Hartman
  * @version 1.0.4
  */
-public class EmployeeSystemV4 {
+public class EmployeeSystem {
     /**
      * Main method that prints menu and gives options. Calls all
      * other methods

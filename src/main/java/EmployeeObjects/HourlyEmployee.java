@@ -26,7 +26,17 @@ public final class HourlyEmployee extends Employee {
     
     public void increaseHours(double h)
     {
-        hoursWorked += h;
+        if (h > 0) {
+            hoursWorked += h;
+        }
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public double getWage() {
+        return wage;
     }
     
     @Override
@@ -35,7 +45,7 @@ public final class HourlyEmployee extends Employee {
         double pay = wage * hoursWorked;
         if (hoursWorked > 40)
         {
-            pay = wage * 40 + (wage*1.5) * (hoursWorked-40);
+            pay = wage * 40 + (wage*1.25) * (hoursWorked-40);
         }
         
         return pay;
@@ -44,7 +54,8 @@ public final class HourlyEmployee extends Employee {
     @Override
     public void annualRaise()
     {
-       wage += wage * .05;
+        double raise = (double)Math.round(wage * .05 * 100)/100;
+        wage += raise;
     }
     
     @Override

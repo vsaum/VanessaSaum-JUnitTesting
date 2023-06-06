@@ -28,6 +28,14 @@ public final class CommissionEmployee extends Employee {
     {
         sales += s;
     }
+
+    public double getSales() {
+        return sales;
+    }
+
+    public double getRate() {
+        return rate;
+    }
     
     @Override
     public double calculateWeeklyPay()
