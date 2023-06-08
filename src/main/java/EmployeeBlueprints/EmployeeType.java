@@ -1,10 +1,28 @@
 package EmployeeBlueprints;
 
+/**
+ * Enumeration for the type of employee in the system.
+ * @author Lucas Hartman
+ * @version 1.0.0
+ */
 public enum EmployeeType {
+    /**
+     * Hourly type
+     */
     HOURLY,
+    /**
+     * Salary type
+     */
     SALARY,
+    /**
+     * Commission type
+     */
     COMMISSION;
 
+    /**
+     * Returns a string of the employee type to print out.
+     * @return a String
+     */
     @Override
     public String toString()
     {
