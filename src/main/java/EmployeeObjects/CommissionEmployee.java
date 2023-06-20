@@ -41,9 +41,10 @@ public final class CommissionEmployee extends Employee {
      * Increases the sales by sent amount 's'. Makes sure 's' is positive.
      * @param s double for the sales to add
      */
-    public void increaseSales(double s)
-    {
-        sales += s;
+    public void increaseSales(double s) {
+        if (s > 0) {
+            sales += s;
+        }
     }
 
     /**
